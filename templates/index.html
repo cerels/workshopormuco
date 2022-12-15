@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Option Selector</title>
+    </head>
+    <body>
+        <h1>Choose an option:</h1>
+        <form>
+            <label for="images">Images:</label>
+            <select id="images" name="images">
+                {% for image in images %}
+                    <option value="{{ image }}">{{ image }}</option>
+                {% endfor %}
+            </select><br>
+            <label for="networks">Networks:</label>
+            <select id="networks" name="networks">
+                {% for network in networks %}
+                    <option value="{{ network }}">{{ network }}</option>
+                {% endfor %}
+            </select><br>
+            <label for="flavors">Flavors:</label>
+            <select id="flavors" name="flavors">
+                {% for flavor in flavors %}
+                    <option value="{{ flavor }}">{{ flavor }}</option>
+                {% endfor %}
+            </select><br>
+            <label for="keys">Keys:</label>
+            <select id="keys" name="keys">
+                {% for key in keys %}
+                    <option value="{{ key }}">{{ key }}</option>
+                {% endfor %}
+            </select><br>
+            <label for="groups">Groups:</label>
+            <select id="groups" name="groups">
+                {% for group in groups %}
+                    <option value="{{ group }}">{{ group }}</option>
+                {% endfor %}
+            </select><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
